@@ -37,7 +37,7 @@ app.post('/ping', async (req, res) => {
             token: targetToken,
             notification: {
               title: 'I love you <3',
-              body: 'I'm a bit busy right now. Will text ya later',
+              body: 'I am a bit busy right now. Will text ya later',
               imageUrl:'https://ik.imagekit.io/Dawnshard/hb.webp?updatedAt=1749770050959',
             },
           },

@@ -19,8 +19,6 @@ const getAccessToken = async () => {
 };
 
 app.post('/ping', async (req, res) => {
-  const targetToken = req.body.token;
-  if (!targetToken) return res.status(400).json({ error: 'Falta el token' });
 
   try {
     const accessToken = await getAccessToken();
@@ -34,7 +32,7 @@ app.post('/ping', async (req, res) => {
         },
         body: JSON.stringify({
           message: {
-            token: targetToken,
+            topic: 'love_ping',
             notification: {
               title: 'I love you <3',
               body: 'I am a bit busy right now. Will text ya later',
